@@ -1,20 +1,21 @@
 Static Build Pack
 ========================
 
-This is a [Heroku buildpack](http://devcenter.heroku.com/articles/buildpack) for static websites, or whatever you want.
+This is a [Heroku buildpack](http://devcenter.heroku.com/articles/buildpack) for processing.js projects.
 
 Use
 -------
 
     $ ls
-    index.html      somedir/
+    PonyRace.pde    sketch.properties
+    data/
     $ git init
-    $ heroku create --stack cedar --buildpack https://github.com/pearkes/heroku-buildpack-static
+    $ heroku create --stack cedar --buildpack https://github.com/jonathanperret/heroku-buildpack-processingjs
     $ git add .
     $ git commit -m "initial commit"
     $ git push heroku master
 
-Optional Congifuration
+Optional Configuration
 -------
 The Apache configuration file is located in `conf/httpd.conf`. To customize, fork and use your fork as the buildpack url on app create.
 
@@ -25,8 +26,8 @@ To test changes to this buildpack, fork it on Github. Push up changes to your fo
 
 All improvements are appreciated!
 
-License
--------
+License for heroku-buildpack-static on which this is based
+--------
 
 Copyright (c) 2012 Jack Pearkes
 
